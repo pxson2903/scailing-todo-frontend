@@ -6,6 +6,7 @@ A Task Management frontend using Next.js
 
 ```bash
 $ yarn install
+$ cp .env.sample .env
 ```
 
 ## Compile and run the project
