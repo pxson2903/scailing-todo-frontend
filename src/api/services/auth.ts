@@ -23,7 +23,7 @@ export interface IRegisterRequest {
   password: string;
   password_confirm: string;
   first_name: string;
-  last_name: string
+  last_name: string;
 }
 
 export interface IRegisterResponse {
@@ -33,7 +33,7 @@ export interface IRegisterResponse {
 
 export const authApi = createApi({
   baseQuery: axiosBaseQuery({
-    baseUrl: `http://localhost:4000`,
+    baseUrl: process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000',
   }),
   endpoints: (builder) => ({
     login: builder.mutation<ILoginResponse, ILoginRequest>({

@@ -47,7 +47,7 @@ export interface IDeleteTaskRequest {
 
 export const taskApi = createApi({
   baseQuery: axiosBaseQuery({
-    baseUrl: `http://localhost:4000`,
+    baseUrl: process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000',
   }),
   endpoints: (builder) => ({
     getTasks: builder.query<ITask[], IGetTasksRequest>({

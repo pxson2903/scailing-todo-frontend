@@ -18,7 +18,7 @@ export interface GetWeatherRequest {
 export const weatherApi = createApi({
   reducerPath: 'weatherApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://127.0.0.1:4000',
+    baseUrl: process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000',
   }),
   endpoints: (builder) => ({
     getWeather: builder.query<WeatherResponse, GetWeatherRequest>({
