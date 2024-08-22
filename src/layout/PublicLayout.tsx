@@ -32,7 +32,6 @@ IS_DEBUG &&
 
 const PublicLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
   const title = TITLE_PUBLIC;
-  document.title = title;
 
   return (
     <TopBarAndSideBarLayout

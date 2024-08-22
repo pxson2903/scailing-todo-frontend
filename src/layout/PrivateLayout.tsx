@@ -22,7 +22,6 @@ IS_DEBUG &&
 
 const PrivateLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
   const title = TITLE_PRIVATE;
-  document.title = title;
 
   return (
     <TopBarAndSideBarLayout
