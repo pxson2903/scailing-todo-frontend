@@ -45,7 +45,6 @@ const LoginForm = () => {
     }).unwrap();
     if (result) {
       dispatch(setAuth({ user: result.user, token: result.token }));
-
       router.replace('/');
     }
   };
@@ -71,10 +70,6 @@ const LoginForm = () => {
             </Grid>
 
             <Grid item xs={12}>
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              />
               <Button
                 fullWidth
                 variant="contained"
