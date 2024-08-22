@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 import { persistReducer } from 'redux-persist';
-import customStorage from './cutomStorage';
+import customStorage from './customStorage';
 import authSlice from './slices/authSlice';
 import { authApi, taskApi, weatherApi } from '@/api/services';
 import { rtkQueryErrorLogger } from './middlewares/rtkQueryErrorLogger';
